@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import Employee from "../interfaces/Employee";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import EmployeeCard from "../components/EmployeeCard";
 
 interface HomeProps {

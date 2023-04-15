@@ -34,13 +34,13 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
           </div>
         </div>
       </div>
-      <a
+      <div
         className="list-item_info-vote"
         onClick={() => dispatch(increaseVote(employee.id))}
       >
         <h1 className="list-item_info-vote_count">{employee.votes}</h1>
         <h2 className="list-item_info-vote_label">Votes</h2>
-      </a>
+      </div>
     </div>
   );
 };
