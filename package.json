@@ -31,7 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start:concurrently": "concurrently \"graphql-faker ./src/Employees.graphql \" \"react-scripts start\""
+    "start:concurrently": "concurrently \"graphql-faker ./src/Employees.graphql \" \"react-scripts start\"",
+    "build:concurrently": "concurrently \"graphql-faker ./src/Employees.graphql \" \"react-scripts build\""
   },
   "eslintConfig": {
     "extends": [
