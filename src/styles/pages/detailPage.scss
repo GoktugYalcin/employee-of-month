@@ -4,13 +4,14 @@
   left: 2.5rem;
   padding: 2.5rem 1.25rem;
   border-radius: 100%;
-  background: #5d7667;
+  background: #134074;
+  color: #f8edeb;
   user-select: none;
   cursor: pointer;
   transition: 200ms all ease-in-out;
 
   &:hover {
-    background: #4a5f52;
+    background: #13315c;
     transform: scale(1.2);
   }
 }

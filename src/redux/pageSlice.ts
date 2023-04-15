@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import pageProps from "../interfaces/Page";
 import eventManager from "../logger";
+import { EventTypes } from "../interfaces/EventTypes";
 
 const initialState: pageProps = {
   page: "home",
@@ -18,7 +19,9 @@ export const pageSlice = createSlice({
         state.selectedEmployee = null;
       }
 
-      eventManager.logEvent(`Page changed to ${action.payload.page}`);
+      eventManager.logEvent(EventTypes.PAGE_CHANGE, {
+        page: action.payload.page,
+      });
       state.page = action.payload.page;
     },
   },

@@ -1,3 +1,5 @@
+import { EventTypes } from "./EventTypes";
+
 export default interface IEventManager {
-  logEvent(event: string): void;
+  logEvent(event: EventTypes, parameters?: any): void;
 }
