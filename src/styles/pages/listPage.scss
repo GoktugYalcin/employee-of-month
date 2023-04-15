@@ -1,0 +1,117 @@
+@import "../variables.scss";
+
+.list {
+  &-item {
+    display: flex;
+    padding: 0.5rem 0.25rem 0.5rem 0.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    transition: background 200ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    border-radius: 999px;
+    cursor: pointer;
+    user-select: none;
+    background: $cardBackground;
+
+    &:hover {
+      transition: background 200ms ease-in-out;
+      background: $cardBackgroundHover;
+    }
+
+    &_info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &-left {
+        display: flex;
+        width: 100%;
+
+        &_photo {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          img {
+            border-radius: 9999px;
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
+
+      &-inner {
+        display: flex;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        font-weight: 500;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        color: $cardText;
+
+        &_name {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          margin: 0;
+        }
+
+        &_other {
+          width: 250px; /* veya istediğiniz bir genişlik değeri */
+          overflow: hidden; /* içeriği sınırlı alan içinde gizle */
+          white-space: nowrap; /* metni tek bir satırda tut */
+          text-overflow: ellipsis;
+        }
+
+        &_job {
+          margin: 0;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          font-weight: 700;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        &_age {
+          margin: 0;
+          font-size: 1.125rem;
+          line-height: 1.75rem;
+        }
+      }
+
+      &-vote {
+        padding: 1.5rem;
+        background: $cardVoteBackground;
+        border-radius: 9999px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+          background: $cardVoteBackgroundHover;
+          transition: all 200ms ease-in-out;
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transition: all 200ms ease-in-out;
+          transform: scale(1.2);
+        }
+
+        &_count {
+          margin: 0;
+          color: $cardVoteTextNum;
+        }
+
+        &_label {
+          margin: 0;
+          color: $cardVoteTextLabel;
+        }
+      }
+    }
+  }
+}

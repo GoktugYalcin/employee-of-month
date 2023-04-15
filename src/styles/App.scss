@@ -1,0 +1,8 @@
+@import "./fonts/main";
+@import "./pages/main";
+@import "variables";
+
+body {
+  background: linear-gradient(to bottom, transparent, $backgroundEnd)
+    $backgroundStart;
+}

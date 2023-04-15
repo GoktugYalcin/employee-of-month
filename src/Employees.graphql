@@ -1,0 +1,13 @@
+type Employees {
+    id: ID!,
+    name: String @fake(type: fullName),
+    age: Int @fake(type: number, options: {minNumber: 18, maxNumber: 65}),
+    votes: Int @fake(type: number, options: {minNumber: 10, maxNumber: 100}),
+    job: String @fake(type: jobTitle),
+    photo: String @fake(type: number, options: {minNumber: 18, maxNumber: 65}),
+    desc: String @fake(type: lorem, options: {loremSize: paragraph})
+}
+
+type Query {
+    getEmployees: [Employees] @listLength(min:20, max: 20)
+}
