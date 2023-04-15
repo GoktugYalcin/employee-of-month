@@ -6,6 +6,7 @@ import { employeesQuery } from "./Apollo/apollo";
 import { setEmployees } from "./redux/employeesSlice";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const dispatch = useDispatch();
@@ -27,7 +28,9 @@ function App() {
         <h1>Choose the Staff of Month!</h1>
       </main>
       <main className={"main-container"}>
-        {pageSlice?.page === "home" ? <Home loading={loading} /> : <Detail />}
+        <AnimatePresence>
+          {pageSlice?.page === "home" ? <Home loading={loading} /> : <Detail />}
+        </AnimatePresence>
       </main>
     </>
   );

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPage } from "../redux/pageSlice";
 import { createFakePhoto } from "../util";
-import eventManager from "../logger";
+import { motion } from "framer-motion";
 
 const Detail: React.FC = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,12 @@ const Detail: React.FC = () => {
       >
         Go Back
       </div>
-      <div className="detail-container">
+      <motion.div
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1, transition: { duration: 0.3 } }}
+        exit={{ x: 300, opacity: 0, transition: { duration: 0.3 } }}
+        className="detail-container"
+      >
         <div className="detail-container_inner">
           <img
             src={createFakePhoto(selectedEmployee.photo)}
@@ -38,7 +43,7 @@ const Detail: React.FC = () => {
             </h3>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

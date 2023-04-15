@@ -4,6 +4,7 @@ import Employee from "../interfaces/Employee";
 import { useDispatch } from "react-redux";
 import { createFakePhoto } from "../util";
 import { setPage } from "../redux/pageSlice";
+import { motion } from "framer-motion";
 
 interface EmployeeCardProps {
   employee: Employee;
@@ -12,7 +13,13 @@ interface EmployeeCardProps {
 const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
   const dispatch = useDispatch();
   return (
-    <div key={employee.id} className="list-item">
+    <motion.div
+      initial={{ x: -300, opacity: 0 }}
+      animate={{ x: 0, opacity: 1, transition: { duration: 0.3 } }}
+      exit={{ x: -300, opacity: 0, transition: { duration: 0.3 } }}
+      key={employee.id}
+      className="list-item"
+    >
       <div
         className="list-item_info-left"
         onClick={() => {
@@ -41,7 +48,7 @@ const EmployeeCard: React.FC<EmployeeCardProps> = ({ employee }) => {
         <h1 className="list-item_info-vote_count">{employee.votes}</h1>
         <h2 className="list-item_info-vote_label">Votes</h2>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

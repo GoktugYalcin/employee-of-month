@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import Employee from "../interfaces/Employee";
 import { useSelector } from "react-redux";
 import EmployeeCard from "../components/EmployeeCard";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface HomeProps {
   loading: string | boolean;
