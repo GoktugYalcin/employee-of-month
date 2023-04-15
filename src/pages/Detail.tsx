@@ -31,6 +31,9 @@ const Detail: React.FC = () => {
             <h1 className="detail-container_info-name">
               {selectedEmployee.name}
             </h1>
+            <h1 className="detail-container_info-mail_phone">
+              {selectedEmployee.mail} - {selectedEmployee.phone}
+            </h1>
             <h2 className="detail-container_info-job">
               {selectedEmployee.job}
             </h2>

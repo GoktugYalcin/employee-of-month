@@ -5,7 +5,9 @@ type Employees {
     votes: Int @fake(type: number, options: {minNumber: 10, maxNumber: 100}),
     job: String @fake(type: jobTitle),
     photo: String @fake(type: number, options: {minNumber: 18, maxNumber: 65}),
-    desc: String @fake(type: lorem, options: {loremSize: paragraph})
+    desc: String @fake(type: lorem, options: {loremSize: paragraph}),
+    phone: String @fake(type: phoneNumber),
+    mail: String @fake(type: email)
 }
 
 type Query {

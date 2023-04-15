@@ -6,5 +6,7 @@ export default interface Employee {
   photo: number;
   votes: number;
   desc: string;
+  mail: string;
+  phone: string;
   __typename: string;
 }

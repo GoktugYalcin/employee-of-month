@@ -40,6 +40,15 @@
   }
 
   &_info {
+    &-mail_phone {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: 400;
+      font-style: italic;
+    }
     &-name {
       font-size: 2.5rem;
       font-weight: 600;
@@ -63,9 +72,9 @@
       display: flex;
       flex-direction: column;
 
-      h4 {
+      span {
         font-size: 1.5rem;
-        font-weight: 600;
+        font-weight: 800;
         margin-top: 1.5rem;
         margin-bottom: 0.5rem;
       }

@@ -10,6 +10,8 @@ export const employeesQuery = gql`
       photo
       votes
       desc
+      mail
+      phone
     }
   }
 `;
