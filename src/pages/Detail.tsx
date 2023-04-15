@@ -18,8 +18,8 @@ const Detail: React.FC = () => {
       </div>
       <motion.div
         initial={{ x: 300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1, transition: { duration: 0.3 } }}
-        exit={{ x: 300, opacity: 0, transition: { duration: 0.3 } }}
+        animate={{ x: 0, opacity: 1, transition: { duration: 0.2 } }}
+        exit={{ x: 300, opacity: 0, transition: { duration: 0.2 } }}
         className="detail-container"
       >
         <div className="detail-container_inner">
