@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import Employee from "../interfaces/Employee";
+import eventManager from "../logger";
 
 export interface CounterState {
   selectedEmployee: Employee | null;
@@ -17,6 +18,7 @@ export const employeesSlice = createSlice({
   initialState,
   reducers: {
     setEmployees: (state, action: PayloadAction<Employee[]>) => {
+      eventManager.logEvent("Employees fetched");
       state.employees = action.payload;
     },
     increaseVote: (state, action: PayloadAction<string>) => {
@@ -25,6 +27,9 @@ export const employeesSlice = createSlice({
       );
       if (employee) {
         employee.votes++;
+        eventManager.logEvent(
+          `Vote increased for ${employee.name} to ${employee?.votes}`
+        );
       }
     },
   },

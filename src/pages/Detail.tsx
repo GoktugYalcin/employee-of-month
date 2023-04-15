@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPage } from "../redux/pageSlice";
 import { createFakePhoto } from "../util";
+import eventManager from "../logger";
 
 const Detail: React.FC = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ const Detail: React.FC = () => {
               {selectedEmployee.age} years old
             </h3>
             <h3 className="detail-container_info-desc">
-              <h3>Employee Description:</h3>
+              <span>Employee Description:</span>
               {selectedEmployee.desc}
             </h3>
           </div>
